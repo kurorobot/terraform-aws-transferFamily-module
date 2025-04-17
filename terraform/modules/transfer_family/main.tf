@@ -10,9 +10,9 @@ resource "aws_transfer_server" "ftp_server" {
     subnet_ids         = var.subnet_ids
   }
 
-  identity_provider_details {
+  identity_provider_details = {
     function = var.lambda_function_arn
   }
 
   tags = var.tags
-} 
+}
